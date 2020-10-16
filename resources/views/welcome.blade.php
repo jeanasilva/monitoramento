@@ -6,7 +6,7 @@
 
         <title>Monitoramento Ping</title>
 
-
+            {{ $usuarios }}
 
     </body>
 </html>

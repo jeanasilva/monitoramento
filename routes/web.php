@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/welcome', function () {
+    // $usuarios = User::find(1);
+     return view('welcome');
 });
 
-Route::get('status', 'StatusController@index');
+// Route::get('status', function(){
+
+//         $users   = App\User::all();
+//         $message = filter_input(\INPUT_GET, 'm');
+//         Notification::send($users, new App\Notifications\TextNotification($message));
+
+// })->middleware('auth');
+
+Route::get('status', 'StatusController@usuarios')->name('status');
+
+// Route::get('statusnew', 'StatusController@usuarios');
 
 Auth::routes();
 
