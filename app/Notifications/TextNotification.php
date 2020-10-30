@@ -30,7 +30,7 @@ class TextNotification extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail', 'database'];
     }
 
     /**
@@ -56,7 +56,9 @@ class TextNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            'message'     => $this->message,
+            'user_id'     => $notifiable->id,
+            'user_email'  => $notifiable->email,
         ];
     }
 }

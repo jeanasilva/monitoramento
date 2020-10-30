@@ -27,7 +27,15 @@ Route::get('/welcome', function () {
 
 // })->middleware('auth');
 
-Route::get('status', 'StatusController@usuarios')->name('status');
+
+// Route::get('me', function(){
+
+//        $user = Auth::user();
+//        return view('notifications', compact('user'));
+
+// })->middleware('auth');
+
+// Route::get('status', 'StatusController@usuarios')->name('status');
 
 // Route::get('statusnew', 'StatusController@usuarios');
 
